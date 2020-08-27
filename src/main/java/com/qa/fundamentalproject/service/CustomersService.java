@@ -4,6 +4,7 @@ import com.qa.fundamentalproject.domain.Customers;
 import com.qa.fundamentalproject.repo.CustomersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.qa.fundamentalproject.exceptions.CustomersNotFoundException;
 import java.util.List;
 
 @Service
@@ -24,7 +25,7 @@ public class CustomersService {
     }
 
     public Customers findNoteById(Long id){
-        return this.repo.findById(id).orElseThrow(NoteNotFoundException::new);
+        return this.repo.findById(id).orElseThrow(CustomersNotFoundException::new);
     }
 
     public Customers updateCustomers(Long id, Customers customer){
@@ -38,7 +39,7 @@ public class CustomersService {
 
     public Boolean deleteNoteById(Long id){
         if(!this.repo.existsById(id)){
-            throw new NoteNotFoundException();
+            throw new CustomersNotFoundException();
         }
         this.repo.deleteById(id);
         return this.repo.existsById(id);
