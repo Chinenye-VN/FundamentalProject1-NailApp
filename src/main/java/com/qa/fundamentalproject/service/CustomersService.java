@@ -21,15 +21,16 @@ public class CustomersService {
     }
 
     public Customers createCustomers(Customers customers){
+
         return this.repo.save(customers);
     }
 
-    public Customers findNoteById(Long id){
+    public Customers findCustomerById(Long id){
         return this.repo.findById(id).orElseThrow(CustomersNotFoundException::new);
     }
 
     public Customers updateCustomers(Long id, Customers customer){
-        Customers update = findNoteById(id);
+        Customers update = findCustomerById(id);
         update.setName(Customers.getName());
         update.setEmail(Customers.getEmail());
         update.setPassword(Customers.getPassword());
@@ -37,9 +38,9 @@ public class CustomersService {
         return this.repo.save(update);
     }
 
-    public Boolean deleteNoteById(Long id){
+    public Boolean deleteCustomerById(Long id){
         if(!this.repo.existsById(id)){
-            throw new CustomersNotFoundException();
+            throw new CustomersNotFoundException(); //if the id doesnt exist return the exception "this customer isn't found"
         }
         this.repo.deleteById(id);
         return this.repo.existsById(id);
