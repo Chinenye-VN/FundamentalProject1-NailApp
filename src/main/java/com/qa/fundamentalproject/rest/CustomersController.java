@@ -1,10 +1,8 @@
 package com.qa.fundamentalproject.rest;
 import com.qa.fundamentalproject.domain.Customers;
 import com.qa.fundamentalproject.service.CustomersService;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import javax.websocket.server.PathParam;
 import java.util.List;
 
 @RestController
