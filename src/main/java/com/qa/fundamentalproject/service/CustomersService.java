@@ -31,14 +31,14 @@ public class CustomersService {
 
     public Customers updateCustomers(Long id, Customers customer){
         Customers update = findCustomerById(id);
-        update.setName(Customers.getName());
-        update.setEmail(Customers.getEmail());
-        update.setPassword(Customers.getPassword());
-        update.setPhoneNumber(Customers.getPhoneNumber());
+        update.setName(customer.getName());
+        update.setEmail(customer.getEmail());
+        update.setPassword(customer.getPassword());
+        update.setPhoneNumber(customer.getPhoneNumber());
         return this.repo.save(update);
     }
 
-    public Boolean deleteCustomerById(Long id){
+    public Boolean deleteCustomersById(Long id){
         if(!this.repo.existsById(id)){
             throw new CustomersNotFoundException(); //if the id doesnt exist return the exception "this customer isn't found"
         }
