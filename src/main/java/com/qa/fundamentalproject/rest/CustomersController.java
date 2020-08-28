@@ -15,7 +15,7 @@ public class CustomersController {
         this.customersService = customersService;
     }
 
-    @GetMapping("/")
+    @GetMapping("/getAllCustomers")
     public List<Customers> getAllCustomers(){
         return this.customersService.readAllCustomers();
     }
@@ -25,7 +25,7 @@ public class CustomersController {
         return this.customersService.createCustomers(customer);
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/deleteCustomers/{id}")
     public Boolean deleteCustomer(@PathVariable Long id){
         return this.customersService.deleteCustomersById(id);
     }

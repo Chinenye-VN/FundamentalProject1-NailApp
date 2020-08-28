@@ -25,7 +25,7 @@ public class BookingController {
 
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/deleteBooking/{id}")
     public Boolean deleteBooking(@PathVariable Long id){
         return this.bookingService.deleteBookingById(id);
     }
