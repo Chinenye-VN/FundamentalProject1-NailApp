@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Customers {
@@ -22,6 +23,10 @@ public class Customers {
 
     @Column
     private Long phoneNumber;
+
+
+    @ManyToOne(targetEntity = Booking.class)
+    private Booking booking;
 
     public Customers() {
 
@@ -72,5 +77,13 @@ public class Customers {
 
     public void setPhoneNumber(Long phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public Booking getBooking() {
+        return booking;
+    }
+
+    public void setBooking(Booking booking) {
+        this.booking = booking;
     }
 }
