@@ -35,7 +35,7 @@ public class CustomersController {
         return this.customersService.findCustomerById(id);
     }
 
-    @PutMapping("/updateNote/{id}")
+    @PutMapping("/updateCustomer/{id}")
     public Customers updateCustomers(@PathVariable Long id, @RequestBody Customers customer){
         return this.customersService.updateCustomers(id, customer);
     }

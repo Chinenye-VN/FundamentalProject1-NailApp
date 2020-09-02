@@ -4,7 +4,6 @@ import com.qa.fundamentalproject.repo.BookingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.qa.fundamentalproject.exceptions.BookingNotFoundException;
-import java.awt.print.Book;
 import java.util.List;
 
 @Service
