@@ -1,11 +1,14 @@
 package com.qa.fundamentalproject.dto;
 
+
 public class BookingDTO {
 
     private Long id;
     private String treatment;
     private String dateBooked;
     private String totalPrice;
+    private CustomersDTO customersDTO;
+
 
     public BookingDTO() {
     }
@@ -47,5 +50,13 @@ public class BookingDTO {
 
     public void setTotalPrice(String totalPrice) {
         this.totalPrice = totalPrice;
+    }
+
+    public CustomersDTO getCustomersDTO() {
+        return customersDTO;
+    }
+
+    public void setCustomersDTO(CustomersDTO customersDTO) {
+        this.customersDTO = customersDTO;
     }
 }
