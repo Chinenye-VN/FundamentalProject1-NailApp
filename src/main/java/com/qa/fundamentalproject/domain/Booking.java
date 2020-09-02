@@ -1,6 +1,4 @@
 package com.qa.fundamentalproject.domain;
-import java.util.ArrayList;
-import java.util.List;
 import javax.persistence.*;
 
 @Entity
@@ -19,8 +17,8 @@ public class Booking {
     private Long totalPrice;
 
 
-    @OneToMany(mappedBy = "Booking", fetch = FetchType.LAZY)
-    private List<Customers> customers = new ArrayList<>();
+    @OneToOne(targetEntity = Customers.class)
+    private Customers customers;
 
 
     public Booking() {
@@ -66,11 +64,11 @@ public class Booking {
     }
 
 
-    public List<Customers> getCustomers() {
+    public Customers getCustomers() {
         return customers;
     }
 
-    public void setCustomers(List<Customers> customers) {
+    public void setCustomers(Customers customers) {
         this.customers = customers;
     }
 }

@@ -25,7 +25,7 @@ public class Customers {
     private Long phoneNumber;
 
 
-    @ManyToOne(targetEntity = Booking.class)
+    @OneToOne(targetEntity = Booking.class)
     private Booking booking;
 
     public Customers() {
