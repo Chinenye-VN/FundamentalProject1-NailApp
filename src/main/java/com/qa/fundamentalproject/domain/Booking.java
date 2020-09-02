@@ -1,5 +1,7 @@
 package com.qa.fundamentalproject.domain;
 import javax.persistence.*;
+import java.math.BigInteger;
+import java.util.Date;
 
 @Entity
 public class Booking {
@@ -11,7 +13,7 @@ public class Booking {
     private String treatment;
 
     @Column
-    private String dateBooked;
+    private Date dateBooked;
 
     @Column
     private float totalPrice;
@@ -24,7 +26,7 @@ public class Booking {
     public Booking() {
     }
 
-    public Booking(String treatment, String dateBooked, float totalPrice) {
+    public Booking(String treatment, Date dateBooked, float totalPrice) {
         this.treatment = treatment;
         this.dateBooked = dateBooked;
         this.totalPrice = totalPrice;
@@ -47,11 +49,11 @@ public class Booking {
         this.treatment = treatment;
     }
 
-    public String getDateBooked() {
+    public Date getDateBooked() {
         return dateBooked;
     }
 
-    public void setDateBooked(String dateBooked) {
+    public void setDateBooked(Date dateBooked) {
         this.dateBooked = dateBooked;
     }
 

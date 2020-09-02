@@ -1,11 +1,13 @@
 package com.qa.fundamentalproject.dto;
 
 
+import java.util.Date;
+
 public class BookingDTO {
 
     private Long id;
     private String treatment;
-    private String dateBooked;
+    private Date dateBooked;
     private float totalPrice;
     private CustomersDTO customersDTO;
 
@@ -13,7 +15,7 @@ public class BookingDTO {
     public BookingDTO() {
     }
 
-    public BookingDTO(String treatment, String dateBooked, float totalPrice) {
+    public BookingDTO(String treatment, Date dateBooked, float totalPrice) {
         this.treatment = treatment;
         this.dateBooked = dateBooked;
         this.totalPrice = totalPrice;
@@ -36,11 +38,11 @@ public class BookingDTO {
         this.treatment = treatment;
     }
 
-    public String getDateBooked() {
+    public Date getDateBooked() {
         return dateBooked;
     }
 
-    public void setDateBooked(String dateBooked) {
+    public void setDateBooked(Date dateBooked) {
         this.dateBooked = dateBooked;
     }
 
