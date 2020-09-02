@@ -22,7 +22,7 @@ public class Customers {
     private String password;
 
     @Column
-    private Long phoneNumber;
+    private int phoneNumber;
 
 
     @OneToOne(targetEntity = Booking.class)
@@ -32,12 +32,13 @@ public class Customers {
 
     }
 
-    public Customers(String name, String email,String password,Long phoneNumber) {
+    public Customers(String name, String email, String password, int phoneNumber) {
         this.name = name;
         this.email = email;
         this.password = password;
         this.phoneNumber = phoneNumber;
     }
+
 
     public Long getId() {
         return id;
@@ -71,11 +72,11 @@ public class Customers {
         this.password = password;
     }
 
-    public Long getPhoneNumber() {
+    public int getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(Long phoneNumber) {
+    public void setPhoneNumber(int phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
