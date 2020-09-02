@@ -5,15 +5,15 @@ public class BookingDTO {
 
     private Long id;
     private String treatment;
-    private String dateBooked;
-    private String totalPrice;
+    private float dateBooked;
+    private float totalPrice;
     private CustomersDTO customersDTO;
 
 
     public BookingDTO() {
     }
 
-    public BookingDTO(String treatment, String dateBooked, String totalPrice) {
+    public BookingDTO(String treatment, float dateBooked, float totalPrice) {
         this.treatment = treatment;
         this.dateBooked = dateBooked;
         this.totalPrice = totalPrice;
@@ -36,19 +36,19 @@ public class BookingDTO {
         this.treatment = treatment;
     }
 
-    public String getDateBooked() {
+    public float getDateBooked() {
         return dateBooked;
     }
 
-    public void setDateBooked(String dateBooked) {
+    public void setDateBooked(float dateBooked) {
         this.dateBooked = dateBooked;
     }
 
-    public String getTotalPrice() {
+    public float getTotalPrice() {
         return totalPrice;
     }
 
-    public void setTotalPrice(String totalPrice) {
+    public void setTotalPrice(float totalPrice) {
         this.totalPrice = totalPrice;
     }
 

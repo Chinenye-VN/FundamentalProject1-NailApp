@@ -11,10 +11,10 @@ public class Booking {
     private String treatment;
 
     @Column
-    private String dateBooked;
+    private float dateBooked;
 
     @Column
-    private String totalPrice;
+    private float totalPrice;
 
 
     @OneToOne(targetEntity = Customers.class)
@@ -24,7 +24,7 @@ public class Booking {
     public Booking() {
     }
 
-    public Booking(String treatment, String dateBooked, String totalPrice) {
+    public Booking(String treatment, float dateBooked, float totalPrice) {
         this.treatment = treatment;
         this.dateBooked = dateBooked;
         this.totalPrice = totalPrice;
@@ -47,19 +47,19 @@ public class Booking {
         this.treatment = treatment;
     }
 
-    public String getDateBooked() {
+    public float getDateBooked() {
         return dateBooked;
     }
 
-    public void setDateBooked(String dateBooked) {
+    public void setDateBooked(float dateBooked) {
         this.dateBooked = dateBooked;
     }
 
-    public String getTotalPrice() {
+    public float getTotalPrice() {
         return totalPrice;
     }
 
-    public void setTotalPrice(String totalPrice) {
+    public void setTotalPrice(float totalPrice) {
         this.totalPrice = totalPrice;
     }
 
