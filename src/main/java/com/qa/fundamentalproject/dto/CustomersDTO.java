@@ -6,13 +6,13 @@ public class CustomersDTO {
     private String name;
     private String email;
     private String password;
-    private int phoneNumber;
+    private String phoneNumber;
 
 
     public CustomersDTO() {
     }
 
-    public CustomersDTO(String name, String email, String password, int phoneNumber) {
+    public CustomersDTO(String name, String email, String password, String phoneNumber) {
         this.name = name;
         this.email = email;
         this.password = password;
@@ -52,12 +52,11 @@ public class CustomersDTO {
         this.password = password;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-
 }
