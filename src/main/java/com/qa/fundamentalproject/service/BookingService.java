@@ -41,7 +41,6 @@ public class BookingService {
     public BookingDTO updateBooking(Long id, Booking booking){
         Booking update = this.repo.findById(id).orElseThrow(BookingNotFoundException::new);
         update.setTreatment(booking.getTreatment());
-        update.setDateBooked(booking.getDateBooked());
         update.setTotalPrice(booking.getTotalPrice());
         return this.mapToDTO(this.repo.save(update));
     }

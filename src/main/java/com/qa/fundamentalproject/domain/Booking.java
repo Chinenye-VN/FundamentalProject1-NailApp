@@ -13,9 +13,6 @@ public class Booking {
     private String treatment;
 
     @Column
-    private Date dateBooked;
-
-    @Column
     private float totalPrice;
 
 
@@ -26,9 +23,8 @@ public class Booking {
     public Booking() {
     }
 
-    public Booking(String treatment, Date dateBooked, float totalPrice) {
+    public Booking(String treatment, float totalPrice) {
         this.treatment = treatment;
-        this.dateBooked = dateBooked;
         this.totalPrice = totalPrice;
 
     }
@@ -49,13 +45,6 @@ public class Booking {
         this.treatment = treatment;
     }
 
-    public Date getDateBooked() {
-        return dateBooked;
-    }
-
-    public void setDateBooked(Date dateBooked) {
-        this.dateBooked = dateBooked;
-    }
 
     public float getTotalPrice() {
         return totalPrice;

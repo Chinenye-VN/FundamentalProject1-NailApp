@@ -23,17 +23,16 @@ public class BookingController {
         return ResponseEntity.ok(this.bookingService.readAllBooking());
     }
 
-    @PostMapping("/createBooking")
+    @PostMapping("/createABooking")
     public ResponseEntity<BookingDTO> createBooking(@RequestBody Booking booking){
         return new ResponseEntity<BookingDTO>(this.bookingService.createBooking(booking), HttpStatus.CREATED);
-
     }
 
     @DeleteMapping("/deleteBooking/{id}")
     public ResponseEntity<?> deleteBooking(@PathVariable Long id){
         return this.bookingService.deleteBookingById(id)
-                ? ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build()
-                : ResponseEntity.noContent().build();
+                ? ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build() // (if else statement in one line) false return error
+                : ResponseEntity.noContent().build(); // true will return a blank response
     }
 
     @GetMapping("/getBookingById/{id}")
