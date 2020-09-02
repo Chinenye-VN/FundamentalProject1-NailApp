@@ -31,8 +31,10 @@ public class BookingService {
 
     public Booking updateBooking(Long id, Booking booking){
         Booking update = findBookingById(id);
+        update.setTreatment(booking.getTreatment());
         update.setDateBooked(booking.getDateBooked());
-        update.setTotal(booking.getTotal());
+        update.setTotalPrice(booking.getTotalPrice());
+
         return this.repo.save(update);
     }
 

@@ -1,9 +1,7 @@
 package com.qa.fundamentalproject.domain;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.*;
 
 @Entity
 public class Booking {
@@ -12,17 +10,27 @@ public class Booking {
     private Long id;
 
     @Column
+    private String treatment;
+
+    @Column
     private Long dateBooked;
 
     @Column
-    private Long total;
+    private Long totalPrice;
+
+
+    @OneToMany(mappedBy = "Booking", fetch = FetchType.LAZY)
+    private List<Customers> customers = new ArrayList<>();
+
 
     public Booking() {
     }
 
-    public Booking(Long dateBooked, Long total) {
+    public Booking(String treatment,Long dateBooked, Long totalPrice) {
+        this.treatment = treatment;
         this.dateBooked = dateBooked;
-        this.total = total;
+        this.totalPrice = totalPrice;
+
     }
 
     public Long getId() {
@@ -33,6 +41,14 @@ public class Booking {
         this.id = id;
     }
 
+    public String getTreatment() {
+        return treatment;
+    }
+
+    public void setTreatment(String treatment) {
+        this.treatment = treatment;
+    }
+
     public Long getDateBooked() {
         return dateBooked;
     }
@@ -41,11 +57,20 @@ public class Booking {
         this.dateBooked = dateBooked;
     }
 
-    public Long getTotal() {
-        return total;
+    public Long getTotalPrice() {
+        return totalPrice;
     }
 
-    public void setTotal(Long total) {
-        this.total = total;
+    public void setTotalPrice(Long totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+
+    public List<Customers> getCustomers() {
+        return customers;
+    }
+
+    public void setCustomers(List<Customers> customers) {
+        this.customers = customers;
     }
 }
