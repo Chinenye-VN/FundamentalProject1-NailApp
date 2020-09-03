@@ -3,7 +3,7 @@ package com.qa.fundamentalproject.dto;
 
 public class BookingDTO {
 
-    private Long id;
+    private Long bookingid;
     private String treatment;
     private float totalPrice;
 
@@ -18,11 +18,11 @@ public class BookingDTO {
     }
 
     public Long getId() {
-        return id;
+        return bookingid;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.bookingid = id;
     }
 
     public String getTreatment() {

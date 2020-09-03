@@ -7,7 +7,7 @@ import java.util.List;
 public class Booking {
     @Id
     @GeneratedValue
-    private Long id;
+    private Long bookingid;
 
     @Column
     private String treatment;
@@ -31,11 +31,11 @@ public class Booking {
     }
 
     public Long getId() {
-        return id;
+        return bookingid;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.bookingid = id;
     }
 
     public String getTreatment() {
