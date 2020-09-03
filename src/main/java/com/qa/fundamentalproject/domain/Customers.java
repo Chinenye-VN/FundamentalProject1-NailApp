@@ -1,9 +1,6 @@
 package com.qa.fundamentalproject.domain;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
