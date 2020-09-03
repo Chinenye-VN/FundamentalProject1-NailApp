@@ -20,7 +20,7 @@ public class CustomersController {
         this.customersService = customersService;
     }
 
-    @GetMapping("/getAllCustomers")
+    @GetMapping("/getAllCustomer")
     public ResponseEntity<List<CustomersDTO>> getAllCustomers(){
 
         return ResponseEntity.ok(this.customersService.readAllCustomers());
@@ -31,7 +31,7 @@ public class CustomersController {
         return new ResponseEntity<CustomersDTO>(this.customersService.createCustomers(customer), HttpStatus.CREATED);
     }
 
-    @DeleteMapping("/deleteCustomers/{id}")
+    @DeleteMapping("/deleteCustomer/{id}")
     public ResponseEntity<?> deleteCustomer(@PathVariable Long id){
         return this.customersService.deleteCustomersById(id)
                 ? ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build()
