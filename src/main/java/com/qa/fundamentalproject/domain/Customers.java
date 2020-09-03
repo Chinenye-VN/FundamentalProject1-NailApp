@@ -28,8 +28,9 @@ public class Customers {
     private String phoneNumber;
 
 
-    @OneToMany(mappedBy = "customer", fetch = FetchType.EAGER)
-    private List<Booking> bookings = new ArrayList<>();
+    @OneToOne(targetEntity = Booking.class)
+    private Booking booking;
+
 
     public Customers() {
 
@@ -83,11 +84,11 @@ public class Customers {
         this.phoneNumber = phoneNumber;
     }
 
-    public List<Booking> getBookings() {
-        return bookings;
+    public Booking getBooking() {
+        return booking;
     }
 
-    public void setBookings(List<Booking> bookings) {
-        this.bookings = bookings;
+    public void setBooking(Booking booking) {
+        this.booking = booking;
     }
 }

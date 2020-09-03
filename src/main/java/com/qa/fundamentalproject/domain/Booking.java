@@ -14,7 +14,7 @@ public class Booking {
     private float totalPrice;
 
 
-    @ManyToOne(targetEntity = Customers.class)
+    @OneToOne(targetEntity = Customers.class)
     private Customers customers;
 
 
