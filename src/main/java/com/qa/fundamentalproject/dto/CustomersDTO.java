@@ -11,7 +11,7 @@ public class CustomersDTO {
     private String email;
     private String password;
     private String phoneNumber;
-    private List<BookingDTO> booking =  new ArrayList<>();
+
 
 
     public CustomersDTO() {
@@ -65,11 +65,4 @@ public class CustomersDTO {
         this.phoneNumber = phoneNumber;
     }
 
-    public List<BookingDTO> getBooking() {
-        return booking;
-    }
-
-    public void setBooking(List<BookingDTO> booking) {
-        this.booking = booking;
-    }
 }

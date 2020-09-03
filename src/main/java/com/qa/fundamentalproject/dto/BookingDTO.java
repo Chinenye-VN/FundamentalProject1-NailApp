@@ -1,11 +1,15 @@
 package com.qa.fundamentalproject.dto;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BookingDTO {
 
-    private Long bookingid;
+    private Long bookingId;
     private String treatment;
     private float totalPrice;
+    private List<CustomersDTO> customers =  new ArrayList<>();
 
 
     public BookingDTO() {
@@ -18,11 +22,11 @@ public class BookingDTO {
     }
 
     public Long getId() {
-        return bookingid;
+        return bookingId;
     }
 
     public void setId(Long id) {
-        this.bookingid = id;
+        this.bookingId = id;
     }
 
     public String getTreatment() {
@@ -42,5 +46,11 @@ public class BookingDTO {
         this.totalPrice = totalPrice;
     }
 
+    public List<CustomersDTO> getCustomers() {
+        return customers;
+    }
 
+    public void setCustomers(List<CustomersDTO> customers) {
+        this.customers = customers;
+    }
 }

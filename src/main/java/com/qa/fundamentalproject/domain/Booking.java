@@ -15,9 +15,9 @@ public class Booking {
     @Column
     private float totalPrice;
 
+    @OneToMany(mappedBy = "booking", fetch = FetchType.EAGER)
+    private List<Customers> customers = new ArrayList<>();
 
-    @ManyToOne(targetEntity = Customers.class)
-    private Customers customers;
 
 
 
@@ -55,12 +55,11 @@ public class Booking {
         this.totalPrice = totalPrice;
     }
 
-    public Customers getCustomers() {
+    public List<Customers> getCustomers() {
         return customers;
     }
 
-    public void setCustomers(Customers customers) {
+    public void setCustomers(List<Customers> customers) {
         this.customers = customers;
     }
-
 }
