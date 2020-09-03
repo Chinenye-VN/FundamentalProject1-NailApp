@@ -6,6 +6,7 @@ public class BookingDTO {
     private Long id;
     private String treatment;
     private float totalPrice;
+    private CustomersDTO customersDTO;
 
 
     public BookingDTO() {
@@ -42,4 +43,11 @@ public class BookingDTO {
         this.totalPrice = totalPrice;
     }
 
+    public CustomersDTO getCustomersDTO() {
+        return customersDTO;
+    }
+
+    public void setCustomersDTO(CustomersDTO customersDTO) {
+        this.customersDTO = customersDTO;
+    }
 }
