@@ -1,5 +1,7 @@
 package com.qa.fundamentalproject.domain;
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Booking {
@@ -14,8 +16,9 @@ public class Booking {
     private float totalPrice;
 
 
-    @OneToOne(targetEntity = Customers.class)
+    @ManyToOne(targetEntity = Customers.class)
     private Customers customers;
+
 
 
     public Booking() {

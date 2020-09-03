@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "bookings"})
@@ -26,8 +28,8 @@ public class Customers {
     private String phoneNumber;
 
 
-    @OneToOne(targetEntity = Booking.class)
-    private Booking booking;
+    @OneToMany(mappedBy = "customer", fetch = FetchType.EAGER)
+    private List<Booking> booking = new ArrayList<>();;
 
 
     public Customers() {
@@ -82,11 +84,11 @@ public class Customers {
         this.phoneNumber = phoneNumber;
     }
 
-    public Booking getBooking() {
+    public List<Booking> getBooking() {
         return booking;
     }
 
-    public void setBooking(Booking booking) {
+    public void setBooking(List<Booking> booking) {
         this.booking = booking;
     }
 }

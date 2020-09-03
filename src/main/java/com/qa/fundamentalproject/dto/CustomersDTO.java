@@ -1,6 +1,8 @@
 package com.qa.fundamentalproject.dto;
 
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class CustomersDTO {
 
@@ -9,6 +11,7 @@ public class CustomersDTO {
     private String email;
     private String password;
     private String phoneNumber;
+    private List<BookingDTO> booking =  new ArrayList<>();
 
 
     public CustomersDTO() {
@@ -60,5 +63,13 @@ public class CustomersDTO {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public List<BookingDTO> getBooking() {
+        return booking;
+    }
+
+    public void setBooking(List<BookingDTO> booking) {
+        this.booking = booking;
     }
 }
