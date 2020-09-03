@@ -28,8 +28,8 @@ public class Customers {
     private String phoneNumber;
 
 
-    @OneToMany(mappedBy = "customer", fetch = FetchType.EAGER)
-    private List<Booking> booking = new ArrayList<>();;
+    @OneToMany(mappedBy = "customers", fetch = FetchType.EAGER)
+    private List<Booking> booking = new ArrayList<>();
 
 
     public Customers() {
