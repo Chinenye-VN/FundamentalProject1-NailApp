@@ -1,12 +1,15 @@
 package com.qa.fundamentalproject.domain;
-
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "bookings"})
 public class Customers {
     @Id
     @GeneratedValue
@@ -25,8 +28,8 @@ public class Customers {
     private String phoneNumber;
 
 
-    @OneToOne(targetEntity = Booking.class)
-    private Booking booking;
+    @OneToMany(mappedBy = "customer", fetch = FetchType.EAGER)
+    private List<Booking> bookings = new ArrayList<>();
 
     public Customers() {
 
@@ -80,11 +83,11 @@ public class Customers {
         this.phoneNumber = phoneNumber;
     }
 
-    public Booking getBooking() {
-        return booking;
+    public List<Booking> getBookings() {
+        return bookings;
     }
 
-    public void setBooking(Booking booking) {
-        this.booking = booking;
+    public void setBookings(List<Booking> bookings) {
+        this.bookings = bookings;
     }
 }

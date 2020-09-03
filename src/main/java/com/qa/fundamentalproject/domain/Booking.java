@@ -1,7 +1,5 @@
 package com.qa.fundamentalproject.domain;
 import javax.persistence.*;
-import java.math.BigInteger;
-import java.util.Date;
 
 @Entity
 public class Booking {
