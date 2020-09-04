@@ -11,16 +11,18 @@ function displayCustomers(){
                 stuff.forEach(el => {
                     let elem = document.createElement('div');
                     let header = document.createElement('h1');
-                    header.textContent = "Booking name: " + el.name;
+                    header.textContent = "Booking name: " + "Acrylic Nails";
                     elem.appendChild(header);
-                    el.customers.forEach(customers => {
-                        console.log(submitBooking()) // print all bookings for each customer
+                    el.customers.forEach(customer => {
                         let customerName = document.createElement('p');
                         let email = document.createElement('p');
-                        customerName.textContent = "customerName: " + customers.name;
-                        email.textContent = "Email: " + customers.email;
+                        let phoneNumber = document.createElement('p');
+                        customerName.textContent = "Customer Name: " + customer.name;
+                        email.textContent = "Email: " + customer.email;
+                        phoneNumber.textContent = "Phone Number:" +customer.phoneNumber;
                         elem.appendChild(customerName);
                         elem.appendChild(email);
+                        elem.appendChild(phoneNumber);
                     })
                     document.body.appendChild(elem);
                 });
@@ -33,7 +35,7 @@ function displayCustomers(){
             console.log("Oh no... handle error");
         }
     };
-    req.open("GET", "http://localhost:8080/getAllCustomer");
+    req.open("GET", "http://localhost:8080/getAllBooking");
     req.send();
 }
 

@@ -8,9 +8,20 @@
         h1 { color: rgb(6, 16, 53);}
     </style>
     <script src="../js/submit.js"></script>
+
 </head>
 <body onload="displayCustomers()">
 <a href="Login.html">Login</a>
 
+<form id="bookingList">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+
+    <label for="email">Email address:</label><br>
+    <input type="email" id="email" name="email"><br><br>
+
+    <input type="submit" value="Delete" onclick="deleteCustomer()">
+
+</form>
 </body>
 </html>
