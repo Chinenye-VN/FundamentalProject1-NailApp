@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Updated</title>
+    <style>
+        body{ background-color: rgb(201, 156, 194);}
+        h1 { color: rgb(6, 16, 53);}
+    </style>
+    <script src="../js/update.js"></script>
+    <script src="../js/submit.js"></script>
+
+
+</head>
+<body onload="updateCustomer()">
+
+<form id="updateForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+
+    <label for="email">Email address:</label><br>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label for="password">Password:</label><br>
+    <input id="password" type="password" name="password"><br>
+
+    <label for="phoneNumber">Phone Number:</label><br>
+    <input id="phoneNumber" type="number" name="phoneNumber"><br>
+
+    <label for="bookingid">Booking Id:</label><br>
+    <input type="text" id="bookingid" name="bookingid"><br><br>
+
+    <input type="submit" value="Update" onclick="submitBooking()">
+</form>
+</body>
+</html>
