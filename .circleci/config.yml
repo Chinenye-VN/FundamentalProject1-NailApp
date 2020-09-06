@@ -14,7 +14,7 @@ jobs:
           command: ssh $SSH_USER@$SSH_HOST "sudo apt-get update && sudo apt-get install -y curl git && sudo apt-get install -y openjdk-8-jdk"
       - run:
           name: Clone Repo & Install Application Dependencies
-          command: ssh $SSH_USER@$SSH_HOST "git clone https://github.com/Chinenye-VN/FundamentalProject1-NailApp && cd ~/FundamentalProject1-NailApp && sudo apt-get install -y maven "
+          command: ssh $SSH_USER@$SSH_HOST "git clone https://github.com/Chinenye-VN/FundamentalProject1-NailApp.git && cd ~/FundamentalProject1-NailApp && sudo apt-get install -y maven"
       - run:
           name: Deploy Application
           command: ssh $SSH_USER@$SSH_HOST "cd ~/FundamentalProject1-NailApp && mvn verify"
