@@ -7,12 +7,12 @@
         body{ background-color: rgb(201, 156, 194);}
         h1 { color: rgb(6, 16, 53);}
     </style>
-    <script src="../js/update.js"></script>
     <script src="../js/submit.js"></script>
 
 
 </head>
 <body onload="updateCustomer()">
+<a href="Login.html">View Homepage</a>
 
 <form id="updateForm">
     <label for="name">Name:</label><br>
@@ -21,8 +21,6 @@
     <label for="email">Email address:</label><br>
     <input type="email" id="email" name="email"><br><br>
 
-    <label for="password">Password:</label><br>
-    <input id="password" type="password" name="password"><br>
 
     <label for="phoneNumber">Phone Number:</label><br>
     <input id="phoneNumber" type="number" name="phoneNumber"><br>
@@ -30,7 +28,7 @@
     <label for="bookingid">Booking Id:</label><br>
     <input type="text" id="bookingid" name="bookingid"><br><br>
 
-    <input type="submit" value="Update" onclick="submitBooking()">
+    <input type="submit" value="Update" onclick= "updateCustomer()">
 </form>
 </body>
 </html>
