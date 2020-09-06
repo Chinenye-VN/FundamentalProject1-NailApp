@@ -17,7 +17,7 @@ jobs:
           command: ssh $SSH_USER@$SSH_HOST "git clone https://github.com/Chinenye-VN/FundamentalProject1-NailApp.git && cd ~/ FundamentalProject1-NailApp && sudo apt-get install -y mvn "
       - run:
           name: Deploy Application
-          command: ssh $SSH_USER@$SSH_HOST "cd ~/ FundamentalProject1-NailApp && mvn verify"
+          command: ssh $SSH_USER@$SSH_HOST "cd ~/FundamentalProject1-NailApp && mvn verify"
 workflows:
   version: 2.1
   test-and-deploy:
