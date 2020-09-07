@@ -11,7 +11,7 @@ function displayCustomers(){
                 stuff.forEach(el => {
                     let elem = document.createElement('div');
                     let header = document.createElement('h1');
-                    header.textContent = "Booking name: " + "Acrylic Nail Set";
+                    header.textContent = "Booking name: " + el.treatment;
                     elem.appendChild(header);
                     el.customers.forEach(customer => {
                         let customerName = document.createElement('p');
@@ -91,14 +91,14 @@ function deleteCustomer(id) {
     req.send();
 }
 
-function updateCustomer() {
+function updateBooking() {
     let elements = document.getElementById("updateForm").elements;
     let obj = {};
     for (let i = 0; i < elements.length - 1; i++) {
         let item = elements.item(i);
         obj[item.name] = item.value;
     }
-    const url = "http://localhost:8080/updateCustomer/" +obj.bookingid;
+    const url = "http://localhost:8080/updateBooking/" +obj.bookingid;
     const req = new XMLHttpRequest();
     req.open("PUT", url);
     req.onload = () => {
@@ -111,8 +111,7 @@ function updateCustomer() {
     };
     req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     req.send(JSON.stringify({
-        name: obj.name, email: obj.email, phoneNumber: obj.phoneNumber, booking: {
-            id: Number(obj.bookingid)
-        }
+        treatment: obj.treatment, totalPrice: obj.totalPrice
+
     }));
 }

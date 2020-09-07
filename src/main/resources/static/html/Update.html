@@ -11,24 +11,20 @@
 
 
 </head>
-<body onload="updateCustomer()">
+<body>
 <a href="Login.html">View Homepage</a>
 
 <form id="updateForm">
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name"><br>
+    <label for="treatment">Treatment:</label><br>
+    <input type="text" id="treatment" name="treatment"><br>
 
-    <label for="email">Email address:</label><br>
-    <input type="email" id="email" name="email"><br><br>
-
-
-    <label for="phoneNumber">Phone Number:</label><br>
-    <input id="phoneNumber" type="number" name="phoneNumber"><br>
+    <label for="totalPrice">Price:</label><br>
+    <input type="text" id="totalPrice" name="totalPrice"><br><br>
 
     <label for="bookingid">Booking Id:</label><br>
     <input type="text" id="bookingid" name="bookingid"><br><br>
 
-    <input type="submit" value="Update" onclick= "updateCustomer()">
+    <input type="submit" value="Update" onclick= "updateBooking()">
 </form>
 </body>
 </html>
