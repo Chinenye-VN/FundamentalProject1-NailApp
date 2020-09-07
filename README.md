@@ -95,7 +95,7 @@ The user is able to login and access their bookings through the booking page. Su
 
 * My application would've been better if it had the third entity table and added the functionality for customers to edit treatments and booking.
 
-* It could be more asthetically pleasing to the eye, but for an initial 
+* In the future it could be more aesthetically pleasing, but for an initial application a coloured background sufficed.
  
 
 ## Author
