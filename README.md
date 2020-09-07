@@ -84,6 +84,7 @@ The user is able to login and access their bookings through the booking page. Su
 
 ![Login page](https://user-images.githubusercontent.com/67292767/92315035-0db28880-efd8-11ea-89ac-218bb6ef231b.png)
 ![All Bookings](https://user-images.githubusercontent.com/67292767/92315023-ea87d900-efd7-11ea-9739-e19794170b8d.png)
+![Update](https://user-images.githubusercontent.com/67292767/92361927-1776e180-f0e7-11ea-9860-8c62e036e7ec.png)
 
 
 ## Improvements
